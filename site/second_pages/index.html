@@ -9,24 +9,26 @@
       
       
       
+        <link rel="prev" href="..">
+      
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Мій технічний блог</title>
+        <title>WordPress у Docker - Мій технічний блог</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,7 +47,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -79,7 +81,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Мій технічний блог" class="md-header__button md-logo" aria-label="Мій технічний блог" data-md-component="logo">
+    <a href=".." title="Мій технічний блог" class="md-header__button md-logo" aria-label="Мій технічний блог" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -99,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              WordPress у Docker
             
           </span>
         </div>
@@ -177,7 +179,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Мій технічний блог" class="md-nav__button md-logo" aria-label="Мій технічний блог" data-md-component="logo">
+    <a href=".." title="Мій технічний блог" class="md-nav__button md-logo" aria-label="Мій технічний блог" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -195,7 +197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -219,10 +221,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/second_pages/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -238,6 +247,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -271,8 +281,189 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+  <h1>WordPress у Docker</h1>
+
+<p>### Крок 1: Підготовка папки</p>
+<p>Створи нову папку для проекту і перейди в неї через термінал:</p>
+<p>Bash</p>
+<pre><code>
+mkdir my\_wordpress\_site
+
+cd my\_wordpress\_site
+
+</code></pre>
+<p>### Крок 2: Створення файлу конфігурації </p>
+<p>Створіть файл <code>docker-compose.yml</code>, який буде «рецептом» для всього сайту:</p>
+<p>Bash</p>
+<pre><code>
+touch docker-compose.yml
+
+</code></pre>
+<p>### Крок 3: Наповнення файлу </p>
+<p>Відкрийте цей файл у текстовому редакторі (наприклад, <code>nano</code> або VS Code) і встав туди наступний код, який автор детально розбирав у відео:</p>
+<p>YAML</p>
+<pre><code>
+version: '3'
+
+
+
+services:
+
+&amp;#x20; # 1. Сервіс бази даних
+
+&amp;#x20; db:
+
+&amp;#x20;   image: mysql:5.7
+
+&amp;#x20;   volumes:
+
+&amp;#x20;     - db\_data:/var/lib/mysql
+
+&amp;#x20;   restart: always
+
+&amp;#x20;   environment:
+
+&amp;#x20;     MYSQL\_ROOT\_PASSWORD: password
+
+&amp;#x20;     MYSQL\_DATABASE: wordpress
+
+&amp;#x20;     MYSQL\_USER: wordpress
+
+&amp;#x20;     MYSQL\_PASSWORD: wordpress
+
+&amp;#x20;   networks:
+
+&amp;#x20;     - wp\_site
+
+
+
+&amp;#x20; # 2. Сервіс PHPMyAdmin (для керування базою через браузер)
+
+&amp;#x20; phpmyadmin:
+
+&amp;#x20;   depends\_on:
+
+&amp;#x20;     - db
+
+&amp;#x20;   image: phpmyadmin/phpmyadmin
+
+&amp;#x20;   restart: always
+
+&amp;#x20;   ports:
+
+&amp;#x20;     - &quot;8080:80&quot;
+
+&amp;#x20;   environment:
+
+&amp;#x20;     PMA\_HOST: db
+
+&amp;#x20;     MYSQL\_ROOT\_PASSWORD: password
+
+&amp;#x20;   networks:
+
+&amp;#x20;     - wp\_site
+
+
+
+&amp;#x20; # 3. Сервіс самого WordPress
+
+&amp;#x20; wordpress:
+
+&amp;#x20;   depends\_on:
+
+&amp;#x20;     - db
+
+&amp;#x20;   image: wordpress:latest
+
+&amp;#x20;   ports:
+
+&amp;#x20;     - &quot;8000:80&quot;
+
+&amp;#x20;   restart: always
+
+&amp;#x20;   volumes:
+
+&amp;#x20;     - ./:/var/www/html
+
+&amp;#x20;   environment:
+
+&amp;#x20;     WORDPRESS\_DB\_HOST: db:3306
+
+&amp;#x20;     WORDPRESS\_DB\_USER: wordpress
+
+&amp;#x20;     WORDPRESS\_DB\_PASSWORD: wordpress
+
+&amp;#x20;     WORDPRESS\_DB\_NAME: wordpress
+
+&amp;#x20;   networks:
+
+&amp;#x20;     - wp\_site
+
+
+
+\# Спільні ресурси
+
+volumes:
+
+&amp;#x20; db\_data:
+
+
+
+networks:
+
+&amp;#x20; wp\_site:
+
+</code></pre>
+<p>### Крок 4: Запуск контейнерів</p>
+<p>Щоб підняти всю цю структуру, автор вводить лише одну головну команду:</p>
+<p>Bash</p>
+<pre><code>
+docker-compose up -d
+
+</code></pre>
+<p>- **<code>-d</code>** (detached mode) — означає, що контейнери запустяться у фоновому режимі, і ти зможеш далі користуватися терміналом.</p>
+<p>&#x20;   </p>
+<p>### Крок 5: Перевірка роботи</p>
+<p>Щоб переконатися, що все запустилося, він використовує:</p>
+<p>Bash</p>
+<pre><code>
+docker ps
+
+</code></pre>
+<p>Ця команда покаже список активних контейнерів та порти, на яких вони працюють.</p>
+<p>---</p>
+<p>### Як користуватися результатом:</p>
+<p>1. **WordPress:** Відкрий у браузері <code>localhost:8000</code>. Там розпочнеться стандартна інсталяція WordPress</p>
+<p>&#x20;   </p>
+<p>2. **База даних (PHPMyAdmin):** Відкрий <code>localhost:8080</code>.</p>
+<p>&#x20;   </p>
+<p>&#x20;   - **Користувач:** root</p>
+<p>&#x20;       </p>
+<p>&#x20;   - **Пароль:** password (як прописано в коді вище)</p>
+<p>&#x20;       </p>
+<p>### Ключові фішки цього способу:</p>
+<p>- **Volumes (<code>./:/var/www/html</code>):**  Це означає, що як тільки ти запустиш команду, у твоїй папці на комп'ютері автоматично з'являться всі файли WordPress. Ти зможеш їх редагувати прямо зі свого ПК.</p>
+<p>&#x20;   </p>
+<p>- **Networks:** Всі сервіси знаходяться в одній мережі <code>wp\_site</code>, тому WordPress бачить базу даних просто за іменем <code>db</code>, а не за IP-адресою.</p>
+<p>&#x20;   </p>
+<p>Якщо ти захочеш все видалити, достатньо буде прописати <code>docker-compose down</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -309,10 +500,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": [], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

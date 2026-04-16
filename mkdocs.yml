@@ -9,3 +9,4 @@ theme:
 nav:
   - Головна: index.md
   - WordPress у Docker: second_pages.md
+  - гайд по встановленню mkdocs : setup_guide.md
