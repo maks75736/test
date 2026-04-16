@@ -1,1 +1,11 @@
-site_name: My Docs
+site_name: Мій технічний блог
+
+theme:
+  name: material
+  palette:
+    scheme: slate # Темна тема (зручно для читання коду)
+    primary: indigo
+
+nav:
+  - Головна: index.md
+  - WordPress у Docker: second_pages.md
