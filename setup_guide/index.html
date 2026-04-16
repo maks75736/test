@@ -1,0 +1,767 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../second_pages/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>гайд по встановленню mkdocs - Мій технічний блог</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mkdocs-github-pages" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Мій технічний блог" class="md-header__button md-logo" aria-label="Мій технічний блог" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Мій технічний блог
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              гайд по встановленню mkdocs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Мій технічний блог" class="md-nav__button md-logo" aria-label="Мій технічний блог" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Мій технічний блог
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Головна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../second_pages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WordPress у Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    гайд по встановленню mkdocs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    гайд по встановленню mkdocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Встановлення та запуск MkDocs (в терміналі)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Команди Git для ініціалізації та першого коміту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gitlab-ciyml-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Команди всередині файлу .gitlab-ci.yml (для CI/CD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Цикл збереження та оновлення змін
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Швидкий фікс (якщо MkDocs не розпізнається)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Покрокова інструкція: Деплой на GitHub Pages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Покрокова інструкція: Деплой на GitHub Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1: Завантажте проект на GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gh-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2: Команда gh-deploy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3: Налаштування GitHub Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Порада щодо оформлення (Material Theme)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Як опублікувати нові зміни
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Встановлення та запуск MkDocs (в терміналі)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Команди Git для ініціалізації та першого коміту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gitlab-ciyml-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Команди всередині файлу .gitlab-ci.yml (для CI/CD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Цикл збереження та оновлення змін
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Швидкий фікс (якщо MkDocs не розпізнається)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Покрокова інструкція: Деплой на GitHub Pages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Покрокова інструкція: Деплой на GitHub Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1: Завантажте проект на GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gh-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2: Команда gh-deploy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3: Налаштування GitHub Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Порада щодо оформлення (Material Theme)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Як опублікувати нові зміни
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>Зрозумів тебе! Ось повний, структурований гайд, зібраний в один Markdown-файл саме так, як ти просив. Можеш просто копіювати цей текст і вставляти у свій проект.</p>
+<hr />
+<h1 id="mkdocs-github-pages">📘 Повний гайд: Встановлення MkDocs та деплой на GitHub Pages</h1>
+<p>Цей посібник містить усі необхідні команди та кроки для створення сучасного сайту документації, вирішення проблем із терміналом та успішної публікації в мережі.</p>
+<h2 id="1-mkdocs">1. Встановлення та запуск MkDocs (в терміналі)</h2>
+<ul>
+<li><code>pip install mkdocs</code> (або <code>pip3 install mkdocs</code>) — для встановлення бібліотеки MkDocs.</li>
+<li><code>mkdocs new my_docs</code> — для створення нового проекту з документацією (де <code>my_docs</code> — це назва вашої папки).</li>
+<li><code>mkdocs serve</code> — для локального запуску сервера. Дозволяє переглядати зміни в реальному часі за адресою <code>http://127.0.0.1:8000</code>.</li>
+</ul>
+<hr />
+<h2 id="2-git">2. Команди Git для ініціалізації та першого коміту</h2>
+<ul>
+<li><code>git init</code> — ініціалізація локального Git-репозиторію в папці проекту.</li>
+<li><code>git remote add origin &lt;посилання_на_репозиторій&gt;</code> — підключення локального репозиторію до вашого проекту на GitHub/GitLab.</li>
+<li><code>git status</code> — перевірка статусу файлів перед додаванням.</li>
+<li><code>git add .</code> — додавання всіх файлів до індексу.</li>
+<li><code>git commit -m "commit inicial"</code> — створення першого коміту.</li>
+<li><code>git push origin master</code> (або <code>main</code>) — відправка коду на сервер.</li>
+</ul>
+<hr />
+<h2 id="3-gitlab-ciyml-cicd">3. Команди всередині файлу <code>.gitlab-ci.yml</code> (для CI/CD)</h2>
+<p>Якщо ви використовуєте GitLab, у скриптах автоматизації зазвичай прописуються такі команди:
+* <code>pip install mkdocs==&lt;версія&gt;</code> (або <code>pip install -r requirements.txt</code>) — встановлення потрібної версії перед збиранням.
+* <code>mkdocs build</code> — генерація статичних HTML-файлів сайту.</p>
+<hr />
+<h2 id="4">4. Цикл збереження та оновлення змін</h2>
+<p>Після внесення будь-яких змін (додавання нових сторінок або редагування конфігу), використовуйте цей цикл:
+1. <code>git add .</code> — підготовка нових файлів.
+2. <code>git commit -m "ваш коментар"</code> — збереження версії.
+3. <code>git push origin main</code> — відправка коду в основну гілку.</p>
+<hr />
+<h2 id="mkdocs">💡 Швидкий фікс (якщо MkDocs не розпізнається)</h2>
+<p>Якщо система видає помилку, що команду <code>mkdocs</code> не знайдено, звертайтеся до неї безпосередньо через Python:</p>
+<ul>
+<li>Замість <code>mkdocs new my_docs</code> пишіть: <strong><code>python -m mkdocs new my_docs</code></strong></li>
+<li>Замість <code>mkdocs serve</code> пишіть: <strong><code>python -m mkdocs serve</code></strong></li>
+<li>Замість <code>mkdocs gh-deploy</code> пишіть: <strong><code>python -m mkdocs gh-deploy</code></strong></li>
+</ul>
+<hr />
+<h2 id="github-pages">🚀 Покрокова інструкція: Деплой на GitHub Pages</h2>
+<h3 id="1-github">Крок 1: Завантажте проект на GitHub</h3>
+<pre><code class="language-bash">git init
+git add .
+git commit -m &quot;Перший коміт документації&quot;
+git remote add origin https://github.com/ВАШЕ_ІМ'Я/ВАШ_РЕПОЗИТОРІЙ.git
+git push -u origin main
+</code></pre>
+<h3 id="2-gh-deploy">Крок 2: Команда gh-deploy</h3>
+<p>MkDocs має вбудовану функцію, яка створює гілку <code>gh-pages</code> і збирає туди сайт:</p>
+<pre><code class="language-bash">python -m mkdocs gh-deploy
+</code></pre>
+<p><em>(Це згенерує папку <code>site</code> та автоматично відправить її у відповідну гілку на GitHub).</em></p>
+<h3 id="3-github-pages">Крок 3: Налаштування GitHub Pages</h3>
+<ol>
+<li>Зайдіть у свій репозиторій на GitHub -&gt; <strong>Settings</strong>.</li>
+<li>Зліва оберіть <strong>Pages</strong>.</li>
+<li>У розділі "Build and deployment" встановіть:</li>
+<li><strong>Source</strong>: Deploy from a branch.</li>
+<li><strong>Branch</strong>: <code>gh-pages</code> та папка <code>/(root)</code>.</li>
+<li>Натисніть <strong>Save</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Важливо:</strong> Ваш репозиторій має бути <strong>публічним (Public)</strong>, щоб GitHub Pages працював безкоштовно.</p>
+</blockquote>
+<hr />
+<h2 id="material-theme">✨ Порада щодо оформлення (Material Theme)</h2>
+<p>Щоб сайт виглядав професійно, встановіть тему <strong>Material</strong>:</p>
+<ol>
+<li>Встановіть її через термінал: <code>pip install mkdocs-material</code>.</li>
+<li>У файлі <code>mkdocs.yml</code> змініть налаштування:</li>
+</ol>
+<pre><code class="language-yaml">theme:
+  name: material
+</code></pre>
+<hr />
+<h2 id="_1">🔄 Як опублікувати нові зміни</h2>
+<p>Кожного разу, коли ви змінюєте вміст (наприклад, додали новий гайд), робіть наступне:</p>
+<p><strong>1. Оновіть вихідний код:</strong></p>
+<pre><code class="language-bash">git add .
+git commit -m &quot;Оновив контент&quot;
+git push origin main
+</code></pre>
+<p><strong>2. Оновіть сам сайт в інтернеті:</strong></p>
+<pre><code class="language-bash">python -m mkdocs gh-deploy
+</code></pre>
+<hr />
+<p><em>Гайд підготовлено для швидкого розгортання документації. Працюй в задоволення!</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
